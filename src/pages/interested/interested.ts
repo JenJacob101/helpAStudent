@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, AlertController} from 'ionic-angular';
 import {TabsPage} from '../tabs/tabs';
+import {HomePage} from '../home/home';
 
 @Component({
   selector: 'page-interested',
@@ -12,7 +13,8 @@ export class InterestedPage {
   constructor(
   	public navCtrl: NavController, 
   	public navParams: NavParams,
-  	public toastCtrl: ToastController) {
+  	public toastCtrl: ToastController,
+    public alertCtrl:AlertController) {
   }
 
   sendMessage(){

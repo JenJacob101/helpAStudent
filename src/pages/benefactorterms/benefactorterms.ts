@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, AlertController} from 'ionic-angular';
+import {HomePage} from '../home/home';
 
 @Component({
   selector: 'page-benefactorterms',
@@ -10,7 +11,28 @@ export class BenefactortermsPage {
   constructor(
   	public navCtrl: NavController, 
   	public navParams: NavParams, 
-  	public toastCtrl: ToastController) {
+  	public toastCtrl: ToastController,
+    public alertCtrl: AlertController) {
+  }
+
+  logout(){
+     let confirm = this.alertCtrl.create({
+      title: 'Logout',
+      message: 'Do you really want to logout?',
+      buttons: [
+        {
+          text: 'No',
+          role:'cancel'
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.navCtrl.parent.parent.setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   agree(){
@@ -28,7 +50,7 @@ export class BenefactortermsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BenefactortermsPage');
+
   }
 
 }

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the StudenthomePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { NavController, NavParams, AlertController} from 'ionic-angular';
+import {HomePage} from '../home/home';
 
 @Component({
   selector: 'page-studenthome',
@@ -14,11 +8,34 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class StudenthomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+  	public navCtrl: NavController, 
+  	public navParams: NavParams,
+  	public alertCtrl: AlertController) {
+  }
+
+  logout(){
+     let confirm = this.alertCtrl.create({
+      title: 'Logout',
+      message: 'Do you really want to logout?',
+      buttons: [
+        {
+          text: 'No',
+          role:'cancel'
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.navCtrl.parent.parent.setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StudenthomePage');
+  	
   }
 
 }

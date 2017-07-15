@@ -1,6 +1,9 @@
 <ion-header>
   <ion-navbar color="secondary">
     <ion-title>Student Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()"><ion-icon name="exit"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -38,6 +41,6 @@
 	  </ion-card-content>
 	</ion-card>
 	<div text-center>
-		<button ion-button color="secondary" (click)="sendFunds()">Send Funds</button>
+		<button ion-button color="secondary" (click)="sendFunds()">Send Fund</button>
 	</div>
 </ion-content>

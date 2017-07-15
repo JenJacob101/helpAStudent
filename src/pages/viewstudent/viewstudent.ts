@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import {InterestedPage} from '../interested/interested';
+import {HomePage} from '../home/home';
 
 
 @Component({
@@ -9,14 +10,38 @@ import {InterestedPage} from '../interested/interested';
 })
 export class ViewstudentPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+  	public navCtrl: NavController, 
+  	public navParams: NavParams,
+  	public alertCtrl:AlertController) {
+  }
+
+   logout(){
+  	 let confirm = this.alertCtrl.create({
+      title: 'Logout',
+      message: 'Do you really want to logout?',
+      buttons: [
+        {
+          text: 'No',
+          role:'cancel'
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+          	this.navCtrl.parent.parent.setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   interested(){
   	this.navCtrl.push(InterestedPage);
   }
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewstudentPage');
+    
   }
 
 }

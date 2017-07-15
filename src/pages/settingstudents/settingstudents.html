@@ -1,12 +1,14 @@
 <ion-header>
   <ion-navbar color="secondary">
     <ion-title>Settings</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()"><ion-icon name="exit"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 	<div text-center>
 		<button ion-button color="secondary" (click)="navStudents()">Update Profile</button>
-		<button ion-button color="secondary" (click)="logout()">Logout</button>
 	</div>
 </ion-content>

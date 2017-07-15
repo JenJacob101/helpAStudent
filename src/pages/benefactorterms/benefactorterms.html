@@ -1,6 +1,9 @@
 <ion-header>
   <ion-navbar color="secondary">
     <ion-title>Benefactor's Terms</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()"><ion-icon name="exit"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -14,6 +17,7 @@
 	  	<p>CEO, Unionbank</p>
 	  </ion-card-content>
 	</ion-card>
+	<br>
 	<div text-center>
 		<button ion-button color="secondary" (click)="agree()">I agree</button>
 		<button ion-button color="primary" (click)="disagree()">I disagree</button>

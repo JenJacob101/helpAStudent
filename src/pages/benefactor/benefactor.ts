@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import {ViewstudentPage} from '../viewstudent/viewstudent';
-
-/**
- * Generated class for the BenefactorPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import {HomePage} from '../home/home';
 
 @Component({
   selector: 'page-benefactor',
@@ -15,16 +9,38 @@ import {ViewstudentPage} from '../viewstudent/viewstudent';
 })
 export class BenefactorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+  	public navCtrl: NavController, 
+  	public navParams: NavParams,
+  	public alertCtrl: AlertController) {
   }
 
+  logout(){
+  	 let confirm = this.alertCtrl.create({
+      title: 'Logout',
+      message: 'Do you really want to logout?',
+      buttons: [
+        {
+          text: 'No',
+          role:'cancel'
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+          	this.navCtrl.parent.parent.setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 
   viewStudent(){
   	this.navCtrl.push(ViewstudentPage);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BenefactorPage');
+    
   }
 
 }
