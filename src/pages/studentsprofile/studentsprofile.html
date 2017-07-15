@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Student Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+		<ion-grid>
+	  <ion-row>
+	    <ion-col col-6><img src="images/sherwin.jpg"></ion-col>
+	    <ion-col col-6><h1><b>Sherwin Villaver</b></h1></ion-col>
+	    <ion-card-content>
+		    <p>
+		    	<b>About</b><br>
+		    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur porttitor erat ut venenatis. Praesent placerat ac nibh eu congue. 
+		    </p>
+	  	</ion-card-content>
+	  </ion-row>
+		</ion-grid>
+	</ion-card>
+	<!-- grades -->
+	<ion-card>
+	  <ion-card-header><h1><b>Grades</b></h1></ion-card-header>
+	  <ion-card-content>
+	  	<div #imageParent class="pinch-zoom-container">
+	  		<img #image dimg="medium" class="pinch-zoom-image" src="images/sample-grades.png" (load)="setMediaLoaded()">
+	  	</div>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>
