@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController} from 'ionic-angular';
-import {StudentsprofilePage} from '../studentsprofile/studentsprofile';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import {HomePage} from '../home/home';
 
-
 @Component({
-  selector: 'page-scholars',
-  templateUrl: 'scholars.html',
+  selector: 'page-settingstudents',
+  templateUrl: 'settingstudents.html',
 })
-export class ScholarsPage {
+
+export class SettingstudentsPage {
 
   constructor(
   	public navCtrl: NavController, 
@@ -36,13 +35,7 @@ export class ScholarsPage {
     confirm.present();
   }
 
-  navProfile(){
-  	this.navCtrl.push(StudentsprofilePage);
-  }
-
   ionViewDidLoad() {
-    
   }
-
 
 }

@@ -19,25 +19,17 @@
 	  </ion-row>
 		</ion-grid>
 	</ion-card>
-	<!-- semester information -->
-	<ion-card>
-	  <ion-card-header><h1><b>Semester Information</b></h1></ion-card-header>
-	  <ion-card-content>
-	  		<p>Units Taken : 18.0</p>
-	  		<p>Tuition Fee : P22,000</p>
-	  		<p>Subjects:</p>
-	  		<p>ENG01 3.0</p>
-	  		<p>PE01 2.0</p>
-	  </ion-card-content>
-	</ion-card>
 	<!-- grades -->
 	<ion-card>
-	  <ion-card-header><h1><b>Previous Grades</b></h1></ion-card-header>
+	  <ion-card-header><h1><b>Grades</b></h1></ion-card-header>
 	  <ion-card-content>
 	  		<img src="images/sample-grades.png">
 	  </ion-card-content>
 	</ion-card>
+
 	<div text-center>
-		<button ion-button color="secondary" (click)="sendFunds()">Send Funds</button>
+		<button ion-button color="secondary" (click)="interested()">
+		<ion-icon name="star" item-start></ion-icon>
+		 &nbsp;Interested</button>
 	</div>
 </ion-content>

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title>Student Profile</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
 		<ion-grid>
 	  <ion-row>
 	    <ion-col col-6><img src="images/jacob.jpg"></ion-col>
-	    <ion-col col-6><h1><b>Sherwin Villaver</b></h1></ion-col>
+	    <ion-col col-6><h1><b>Jacob Cosare</b></h1></ion-col>
 	    <ion-card-content>
 		    <p>
 		    	<b>About</b><br>
@@ -23,11 +23,11 @@
 	<ion-card>
 	  <ion-card-header><h1><b>Semester Information</b></h1></ion-card-header>
 	  <ion-card-content>
-	  		<p>Units Taken : 18.0</p>
-	  		<p>Tuition Fee : P22,000</p>
-	  		<p>Subjects:</p>
-	  		<p>ENG01 3.0</p>
-	  		<p>PE01 2.0</p>
+  		<p>Units Taken : 18.0</p>
+  		<p>Tuition Fee : P22,000</p>
+  		<p>Subjects:</p>
+  		<p>ENG01 3.0</p>
+  		<p>PE01 2.0</p>
 	  </ion-card-content>
 	</ion-card>
 	<!-- grades -->
@@ -37,7 +37,24 @@
 	  		<img src="images/sample-grades.png">
 	  </ion-card-content>
 	</ion-card>
+	<ion-card>
+	  <ion-card-header><h1><b>UploadFiles</b></h1></ion-card-header>
+	  <ion-card-content>
+	  	<ion-label>
+	  		Form 137 :
+	  	</ion-label>
+	  		<input type="file" name="form137">
+	  	<ion-label>
+	  		Birth Certificate :
+	  	</ion-label>
+	  		<input type="file" name="birth">
+	  	<ion-label>
+	  		Good Moral :
+	  	</ion-label>
+	  		<input type="file" name="goodmoral">
+	  </ion-card-content>
+	</ion-card>
 	<div text-center>
-		<button ion-button color="secondary" (click)="sendFunds()">Send Funds</button>
+		<button ion-button color="secondary">Save</button>
 	</div>
 </ion-content>

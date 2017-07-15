@@ -1,30 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {ViewstudentPage} from '../viewstudent/viewstudent';
 
 /**
- * Generated class for the BenefactorPage page.
+ * Generated class for the StudenthomePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-benefactor',
-  templateUrl: 'benefactor.html',
+  selector: 'page-studenthome',
+  templateUrl: 'studenthome.html',
 })
-export class BenefactorPage {
+export class StudenthomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-
-  viewStudent(){
-  	this.navCtrl.push(ViewstudentPage);
-  }
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BenefactorPage');
+    console.log('ionViewDidLoad StudenthomePage');
   }
 
 }
